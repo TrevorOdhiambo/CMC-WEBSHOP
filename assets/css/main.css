@@ -271,4 +271,231 @@ main{
      color: rgb(218, 59, 59); 
 }
 
-/* Car display */
+/* Main  display */
+.main-display {
+    width: 70%;
+    margin-top: 40px;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: 
+      
+      "filterArea carArea"
+      "footer  footer";
+  }
+  /* Car display */
+
+.car-display {
+    grid-area: carArea;
+    width:95%;
+    background-color: #20bf6b;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+.card{
+    width: 200px;
+
+}
+
+
+ .filter {
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    grid-area: filterArea;
+    
+  }
+  .filter-card{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+  }
+  .filter-card .title{
+      background-color: rgb(8, 41, 77);
+  }
+  .filter-card .title p{
+      color: #fff;
+      text-align: center;
+  }
+  .filter-card .title span{
+      color: rgba(255,0,0,0.8155637254901961);
+  }
+
+.filter-card form{
+    padding:10px;
+    background-color: rgb(200, 212, 214);
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start;
+    justify-content: space-evenly; */
+}
+.filter-card form .form-input{
+    padding:10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.filter-card form .form-input label{
+    color:black;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    padding-bottom: 5px;
+}
+.filter-card form .form-input select{
+    padding: 10px;
+    
+    outline: none;
+    background-color: cornsilk;
+}
+
+.price-range{
+    background-color: #093361;
+    color: white;
+    padding:10px 0 20px 10px;
+    font-size: 0.7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.middle {
+	position: relative;
+	width: 100%;
+	
+}
+
+.slider {
+	position: relative;
+	z-index: 1;
+	height: 4px;
+	margin: 0 15px;
+}
+.slider > .track {
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	border-radius: 5px;
+	background-color: #9c9c9c;
+}
+.slider > .range {
+	position: absolute;
+	z-index: 2;
+	left: 25%;
+	right: 25%;
+	top: 0;
+	bottom: 0;
+	border-radius: 5px;
+	background-color: #da1e1e;
+}
+.slider > .thumb {
+	position: absolute;
+	z-index: 3;
+	width: 10px;
+	height: 10px;
+	background-color: #da1e1e;
+	border-radius: 50%;
+	box-shadow: 0 0 0 0 rgba(98,0,238,.1);
+	transition: box-shadow .3s ease-in-out;
+}
+.slider > .thumb.left {
+	left: 28%;
+	transform: translate(-15px, -3px);
+}
+.slider > .thumb.right {
+	right: 28%;
+	transform: translate(15px, -3px);
+}
+
+input[type=range] {
+	position: absolute;
+	cursor: pointer;
+	z-index: 2;
+	height: 10px;
+	width: 100%;
+	opacity: 0;
+}
+
+.range-labels{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.range-labels span{
+    color: #da1e1e;
+    padding:3px 3px 0 0;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.ad {
+    margin-top:5px;
+    width: 100%;
+    background-color: #093361;
+   
+}
+
+.ad-title{
+    background-color: #093361;
+    padding: 2px;
+    text-align: center;
+    font-weight: 900;
+    color: #fff;
+}
+.ad-image img{
+    width: 100%;
+    height: 150px;
+    
+}
+.ad-price{
+    position: relative;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #da1e1e;
+    color: #ffffff;
+    padding: 5px;
+    width: 60%;
+} 
+ .ad-details button{
+    border: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    
+}
+.ad-description{
+    background-color: #093361;
+    padding-left:30px ;
+    
+    text-align: justify;
+}
+.ad-description p{
+    color: rgb(179, 175, 175);
+    font-size: 0.8rem;
+}
+.ad-description button{
+    background-color: #da1e1e;
+    color: #fff;
+    padding: 15px 10px;
+    border: 0;
+    width: 80%;
+    font-size: 0.6rem;
+    font-weight: 200;
+}
+
+footer {
+    padding: 20px;
+    grid-area: footer;
+    background-color: #fd9644;
+    width: 100vw;
+  }
